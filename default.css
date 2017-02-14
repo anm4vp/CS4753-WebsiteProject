@@ -526,11 +526,13 @@ hr {
 
 }
 #wrapper .text {
-	bottom:30px;
+	bottom:110px;
 	left:30px;
 	text-align: center;
 	position: relative;
-	color: #ffffff;
+	border-bottom: 1px solid #FFF;
+	border-top: 1px solid #FFF;
+	color: white;
 	font-family: 'Raleway',sans-serif;
 	font-size: 25px;
 	font-weight: 200;
@@ -539,11 +541,11 @@ hr {
 }
 
 #wrapper:hover .text {
-visibility:visible;
+	visibility:visible;
 }
 
 .box-style2:hover  {
-	opacity:0.6;
+	opacity:0.85;
 }
 
 
