@@ -1192,7 +1192,7 @@
 		transition: opacity 0.25s ease-in-out;
 		display: inline-block;
 		padding: 15px 0 0 0;
-		border: solid 5px #ed786a !important;
+		border: solid 3px #ed786a !important;
 		width:1250px;
 	}
 		.image:hover {
