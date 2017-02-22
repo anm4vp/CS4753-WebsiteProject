@@ -1550,7 +1550,7 @@
 		position: relative;
 		background: #fff;
 		text-align: center;
-		
+
 	}
 
 		#header-wrapper p {
@@ -1590,6 +1590,12 @@
 		background: #fff;
 		text-align: center;
 	}
+	#features-wrapper4 {
+		position: relative;
+		overflow: hidden;
+		background: #fff;
+		text-align: center;
+	}
 		#features-wrapper p {
 			text-align: center;
 		}
@@ -1599,6 +1605,9 @@
 		}
 		#features-wrapper3 .actions {
 			margin-top: 10em;
+		}
+		#features-wrapper4 .actions {
+			margin-top: 1000em;
 		}
 		#features-wrapper2 {
 			position: relative;
@@ -1866,6 +1875,9 @@
 			}
 			#features-wrapper3 {
 				padding: 2.0em 0 2.0em 0;
+			}
+			#features-wrapper4 {
+				padding: 20.0em 0 20.0em 0;
 			}
 			#banner-wrapper {
 				padding: 3em 0 3em 0;
@@ -2535,4 +2547,144 @@
 				padding-top: 2em;
 			}
 
+	}
+
+
+	body3{
+		margin: 0;
+		padding: 0;
+		background: #fff;
+
+		color: #fff;
+		font-family: Arial;
+		font-size: 12px;
+	}
+
+	.body3{
+		position: absolute;
+		top: -20px;
+		left: -20px;
+		right: -40px;
+		bottom: -40px;
+		width: auto;
+		height: auto;
+		background-image: url("image5.jpg");
+		background-size: cover;
+		-webkit-filter: blur(5px);
+		z-index: 0;
+	}
+
+	.grad3{
+		position: absolute;
+		top: -20px;
+		left: -100px;
+		right: -40px;
+		bottom: -40px;
+		width: auto;
+		height: auto;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+		z-index: 1;
+		opacity: 0.7;
+	}
+
+	.header3{
+		position: absolute;
+		top: calc(50% - 225px);
+		left: calc(50% - 255px);
+		z-index: 2;
+	}
+
+	.header3 div{
+		float: left;
+		color: #fff;
+		font-family: 'Arvo';
+		font-weight: 600;
+		font-size: 2em;
+		text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+	}
+
+	.header3 div span{
+		color: #fff !important;
+	}
+
+	.login3{
+		position: absolute;
+		top: calc(50% - 75px);
+		left: calc(50% - 50px);
+		height: 150px;
+		width: 350px;
+		padding: 10px;
+		z-index: 2;
+	}
+
+	.login3 input[type=text]{
+		width: 250px;
+		height: 30px;
+		background: transparent;
+		border: 1px solid rgba(255,255,255,0.6);
+		border-radius: 2px;
+		color: #fff;
+		font-family: 'Exo', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 4px;
+	}
+
+	.login3 input[type=password]{
+		width: 250px;
+		height: 30px;
+		background: transparent;
+		border: 1px solid rgba(255,255,255,0.6);
+		border-radius: 2px;
+		color: #fff;
+		font-family: 'Exo', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 4px;
+		margin-top: 10px;
+	}
+
+	.login3 input[type=button]{
+		width: 260px;
+		height: 35px;
+		background: #fff;
+		border: 1px solid #fff;
+		cursor: pointer;
+		border-radius: 2px;
+		color: #a18d6c;
+		font-family: 'Exo', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 6px;
+		margin-top: 10px;
+	}
+
+	.login3 input[type=button]:hover{
+		opacity: 0.8;
+	}
+
+	.login3 input[type=button]:active{
+		opacity: 0.6;
+	}
+
+	.login3 input[type=text]:focus{
+		outline: none;
+		border: 1px solid rgba(255,255,255,0.9);
+	}
+
+	.login3 input[type=password]:focus{
+		outline: none;
+		border: 1px solid rgba(255,255,255,0.9);
+	}
+
+	.login3 input[type=button]:focus{
+		outline: none;
+	}
+
+	::-webkit-input-placeholder{
+	   color: rgba(255,255,255,0.6);
+	}
+
+	::-moz-input-placeholder{
+	   color: rgba(255,255,255,0.6);
 	}
