@@ -1592,7 +1592,7 @@
 	}
 	#features-wrapper4 {
 		position: relative;
-		overflow: hidden;
+		/*overflow: hidden;*/
 		background: #fff;
 		text-align: center;
 	}
@@ -2551,8 +2551,8 @@
 
 
 	body3{
-		margin: 0;
-		padding: 0;
+		margin: 100px;
+		padding:100px;
 		background: #fff;
 
 		color: #fff;
@@ -2562,24 +2562,24 @@
 
 	.body3{
 		position: absolute;
-		top: -20px;
+		top: -50px;
 		left: -20px;
 		right: -40px;
-		bottom: -40px;
+		bottom: 0px;
 		width: auto;
 		height: auto;
 		background-image: url("image5.jpg");
 		background-size: cover;
-		-webkit-filter: blur(5px);
+		-webkit-filter: blur(2px);
 		z-index: 0;
 	}
 
 	.grad3{
 		position: absolute;
-		top: -20px;
+		top: -50px;
 		left: -100px;
 		right: -40px;
-		bottom: -40px;
+		bottom: 0px;
 		width: auto;
 		height: auto;
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
@@ -2589,13 +2589,12 @@
 
 	.header3{
 		position: absolute;
-		top: calc(50% - 225px);
-		left: calc(50% - 255px);
+		top: calc(50% - 250px);
+		left: calc(50% - 250px);
 		z-index: 2;
 	}
 
 	.header3 div{
-		float: left;
 		color: #fff;
 		font-family: 'Arvo';
 		font-weight: 600;
@@ -2605,59 +2604,105 @@
 
 	.header3 div span{
 		color: #fff !important;
+		font-size: 22px;
+	}
+
+	/*h15{
+	  text-align:center;
+	  color:$white;
+	  font-weight:$thin;
+	  margin-top: 40px;
+	}*/
+
+	h15 {
+		font-size: 1.20em;
+		font-weight: $thin;
+		letter-spacing: 4px;
+		margin: 0 0 1.5em 0;
+		line-height: 1.75em;
+		text-align: center;
 	}
 
 	.login3{
-		position: absolute;
-		top: calc(50% - 75px);
-		left: calc(50% - 50px);
+		position: relative;
+		top: calc(50% - 125px);
+		left: calc(50% - 155px);
 		height: 150px;
 		width: 350px;
-		padding: 10px;
-		z-index: 2;
+		padding: 0px;
+		z-index: 5;
+		margin-top: -85px;
 	}
 
 	.login3 input[type=text]{
-		width: 250px;
+		width: 168px;
 		height: 30px;
 		background: transparent;
-		border: 1px solid rgba(255,255,255,0.6);
-		border-radius: 2px;
+		border: 2px solid rgba(255,255,255,1);
+		border-radius: 1px;
 		color: #fff;
 		font-family: 'Exo', sans-serif;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 800;
 		padding: 4px;
+		margin-top: 10px;
+	}
+	.login3 input[type=text2]{
+		width: 340px;
+		height: 30px;
+		background: transparent;
+		border: 2px solid rgba(255,255,255,1);
+		border-radius: 1px;
+		color: #fff;
+		font-family: 'Exo', sans-serif;
+		font-size: 16px;
+		font-weight: 800;
+		padding: 4px;
+		margin-top: 10px;
+	}
+	.login3 input[type=text3]{
+		width: 110.9px;
+		height: 30px;
+		background: transparent;
+		border: 2px solid rgba(255,255,255,1);
+		border-radius: 1px;
+		color: #fff;
+		font-family: 'Exo', sans-serif;
+		font-size: 16px;
+		font-weight: 800;
+		padding: 4px;
+		margin-top: 10px;
 	}
 
 	.login3 input[type=password]{
-		width: 250px;
+		width: 340px;
 		height: 30px;
 		background: transparent;
-		border: 1px solid rgba(255,255,255,0.6);
-		border-radius: 2px;
+		border: 2px solid rgba(255,255,255,1);
+		border-radius: 1px;
 		color: #fff;
 		font-family: 'Exo', sans-serif;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 800;
 		padding: 4px;
 		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 
-	.login3 input[type=button]{
-		width: 260px;
-		height: 35px;
-		background: #fff;
-		border: 1px solid #fff;
-		cursor: pointer;
-		border-radius: 2px;
-		color: #a18d6c;
-		font-family: 'Exo', sans-serif;
-		font-size: 16px;
-		font-weight: 400;
-		padding: 6px;
-		margin-top: 10px;
-	}
+	.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
 
 	.login3 input[type=button]:hover{
 		opacity: 0.8;
@@ -2669,12 +2714,20 @@
 
 	.login3 input[type=text]:focus{
 		outline: none;
-		border: 1px solid rgba(255,255,255,0.9);
+		border: 2px solid rgba(237, 120, 106, 1);
+	}
+	.login3 input[type=text2]:focus{
+		outline: none;
+		border: 2px solid rgba(237, 120, 106, 1);
+	}
+	.login3 input[type=text3]:focus{
+		outline: none;
+		border: 2px solid rgba(237, 120, 106, 1);
 	}
 
 	.login3 input[type=password]:focus{
 		outline: none;
-		border: 1px solid rgba(255,255,255,0.9);
+		border: 2px solid rgba(237, 120, 106, 1);
 	}
 
 	.login3 input[type=button]:focus{

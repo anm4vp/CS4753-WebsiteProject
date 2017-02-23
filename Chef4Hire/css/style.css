@@ -12,7 +12,7 @@ body{
 }
 
 .body{
-	position: absolute;
+	position: fixed;
 	top: -20px;
 	left: -20px;
 	right: -40px;
