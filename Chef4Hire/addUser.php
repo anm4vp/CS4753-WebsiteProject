@@ -1,115 +1,30 @@
-
-
 <!DOCTYPE HTML>
 <!--
 Strongly Typed by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
+<?php
+
+	# Connet to DB
+	/*$db = new mysqli('localhost', 'root', 'secret', 'store');
+	      if ($db->connect_error):
+	         die ("Could not connect to db: " . $db->connect_error);
+	      endif;*/
+
+	# Authenticate user login and store user info in session var
+?>
 <html>
 <head>
-	<title>About</title>
+	<title>Thank You</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	<script type="text/javascript">
-		function formValidation(){
-			var user = document.register.User;
-			var firstnname = document.register.FirstName;
-			var lastname = document.register.LastName;
-			var email = document.register.Email;
-			var address = document.register.Address;
-			var city = document.register.City;
-			var state = document.register.State;
-			var zipcode = document.register.ZipCode;
-
-			if(!userVal(user) || !nameVal(firstnname, lastname) || ! emailVal(email) || !addressVal(address) || !cityVal(city) || !stateVal(state) || !zipcodeVal(zipcode)){
-				return false;
-			}
-			return true;
-
-		}
-
-		function userVal(user){
-			if(user.value.length == 0){
-				alert("Username field is empty");
-				user.focus();
-				return false;
-			}
-			return true;
-		}
-
-		function nameVal(firstnname, lastname){
-			var allLetters = /^[A-Za-z]+$/;
-			if(!firstnname.value.match(allLetters)){
-				alert("First name not valid");
-				firstnname.focus();
-				return false;
-			}
-			if(!lastname.value.match(allLetters)){
-				alert("Last name not valid");
-				lastname.focus();
-				return false;
-			}
-			return true;
-		}
-
-		function emailVal(email){
-			var emailcheck = /^([A-Za-z0-9._-])+@([a-z])+\.([a-z.])+$/;
-			if(!email.value.match(emailcheck)){
-				alert("Email is invalid");
-				email.focus();
-				return false;
-			}
-			return true;
-		}
-
-		function addressVal(address){
-			var check = /^\d+ ([A-Za-z ])+$/;
-			if(!address.value.match(check)){
-				alert("Address is invalid");
-				address.focus();
-				return false;
-			}
-			return true;
-		}
-
-		function cityVal(city){
-			var check = /^[A-Za-z ]+$/;
-			if(!city.value.match(check)){
-				alert("City is invalid");
-				city.focus();
-				return false;
-			}
-			return true;
-		}
-
-		function stateVal(state){
-			var check = /^([A-Z]){2}$/;
-			if(!state.value.match(check)){
-				alert("State is invalid");
-				state.focus();
-				return false;
-			}
-			return true;
-		}
-
-		function zipcodeVal(zipcode){
-			var check = /^[0-9]{5}$/;
-			if(!zipcode.value.match(check)){
-				alert("Zipcode is invalid");
-				zipcode.focus();
-				return false;
-			}
-			return true;
-		}
-
-	</script>
 </head>
 <body class="homepage">
-
 	<div id="page-wrapper">
 
 		<!-- Header -->
@@ -134,44 +49,24 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 	</div>
 </div>
-
 <!-- Main -->
-<div id="features-wrapper4">
-	<section id="features" class="container">
+<div id="main-wrapper">
+	<div id="main" class="container">
+		<div id="content">
 
 			<!-- Post -->
+			<article class="box post">
+				<header>
+					<h2>Thank You</h2>
+				</header>
+				<span class="image featured"><img src="images/image7.jpeg" alt="" /></span>
+				<h3>Thank You</h3>
+				<p>Thank you for signing up with Chef-4-Hire!</p>
 
-		<div class="body3"></div>
-		<div class="grad3"></div>
-		<div class="header3">
-			<div><h15>Create your account.</h15></div>
-			<div><span>Start your healthy lifestyle now.</span></div>
-
-
-		</div>
-
-		<br>
-
-				<div class="login3">
-					<form name="register" action = "addUser.php" onSubmit="return formValidation();">
-						<input type="text2" placeholder="Username" name="User">
-						<input type="text" placeholder="First Name" name="FirstName">
-						<input type="text" placeholder="Last Name" name = "LastName">
-						<input type="text2" placeholder="Email" name = "Email"></br>
-						<input type="text2" placeholder="Address" name = "Address"></br>
-						<input type="text3" placeholder="City" name = "City">
-						<input type="text3" placeholder="State" name = "State">
-						<input type="text3" placeholder="Zip Code" name = "ZipCode"> </br></br>
-						<!-- <input type="password" placeholder="Password" name="Password"></br></br> -->
-						<input type="submit" value="SignUp">
-						<!-- <a href="#" class="form-button-submit button icon fa-pencil">SignUp</a> -->
-					</form>
-		</div>
+				</article>
 			</div>
-				</div>
-			<!-- </div>
-			</div> -->
-
+		</div>
+	</div>
 	<div id="footer-wrapper">
 		<div id="footer" class="container">
 			<header>
