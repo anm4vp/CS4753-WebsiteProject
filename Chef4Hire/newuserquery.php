@@ -30,6 +30,6 @@
 		$db->query($query) or die ("Invalid insert " . $db->error);
 		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/addUser.html");
 	else:
-		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/signup.html");
+		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/Duplicate.html");
 	endif;
 ?>

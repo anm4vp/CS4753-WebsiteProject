@@ -1369,24 +1369,24 @@
 	}
 
 	form .formerize-placeholder {
-		color: #555 !important;
+		color: #B2B5CB !important;
 	}
 
 	form ::-webkit-input-placeholder {
-		color: #555 !important;
+		color:#B2B5CB!important;
 		line-height: 1.35em;
 	}
 
 	form :-moz-placeholder {
-		color: #555 !important;
+		color:#B2B5CB!important;
 	}
 
 	form ::-moz-placeholder {
-		color: #555 !important;
+		color: #B2B5CB !important;
 	}
 
 	form :-ms-input-placeholder {
-		color: #555 !important;
+		color:#B2B5CB!important;
 	}
 
 	form ::-moz-focus-inner {
@@ -2634,8 +2634,8 @@
 		margin-top: -85px;
 	}
 
-	.login3 input[type=text]{
-		width: 168px;
+		.login3 input[type=text4]{
+		width: 169px;
 		height: 30px;
 		background: transparent;
 		border: 2px solid rgba(255,255,255,1);
@@ -2661,7 +2661,7 @@
 		margin-top: 10px;
 	}
 	.login3 input[type=text3]{
-		width: 110.9px;
+		width: 111px;
 		height: 30px;
 		background: transparent;
 		border: 2px solid rgba(255,255,255,1);
@@ -2704,6 +2704,7 @@
 	margin-top: 10px;
 }
 
+
 	.login3 input[type=button]:hover{
 		opacity: 0.8;
 	}
@@ -2712,7 +2713,7 @@
 		opacity: 0.6;
 	}
 
-	.login3 input[type=text]:focus{
+	.login3 input[type=text4]:focus{
 		outline: none;
 		border: 2px solid rgba(237, 120, 106, 1);
 	}
@@ -2735,9 +2736,9 @@
 	}
 
 	::-webkit-input-placeholder{
-	   color: rgba(255,255,255,0.6);
+	   color: rgba(255,255,255,1);
 	}
 
 	::-moz-input-placeholder{
-	   color: rgba(255,255,255,0.6);
+	   color: rgba(255,255,255,1);
 	}
