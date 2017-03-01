@@ -2742,3 +2742,8 @@
 	::-moz-input-placeholder{
 	   color: rgba(255,255,255,1);
 	}
+P.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}

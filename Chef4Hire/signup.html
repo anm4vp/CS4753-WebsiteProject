@@ -24,6 +24,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			var city = document.register.City;
 			var state = document.register.State;
 			var zipcode = document.register.ZipCode;
+	
+
 
 			if(!userVal(user) || !nameVal(firstnname, lastname) || ! emailVal(email) || !addressVal(address) || !cityVal(city) || !stateVal(state) || !zipcodeVal(zipcode)){
 				return false;
@@ -87,7 +89,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		}
 
 		function stateVal(state){
-			var check = /^([A-Z]){2}$/;
+			var check = /^[A-Za-z ]+$/;
 			if(!state.value.match(check)){
 				alert("State is invalid");
 				state.focus();
@@ -106,6 +108,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			return true;
 		}
 
+		
 	</script>
 </head>
 <body class="homepage">
@@ -161,7 +164,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 						<input type="text2" placeholder="Address" name = "Address"></br>
 						<input type="text3" placeholder="City" name = "City">
 						<input type="text3" placeholder="State" name = "State">
-						<input type="text3" placeholder="Zip Code" name = "ZipCode"> </br></br>
+						<input type="text3" placeholder="Zip Code" name = "ZipCode"> </br>
+						</br>
 						<!-- <input type="password" placeholder="Password" name="Password"></br></br> -->
 						<input type="submit" value="SignUp">
 						<!-- <a href="#" class="form-button-submit button icon fa-pencil">SignUp</a> -->

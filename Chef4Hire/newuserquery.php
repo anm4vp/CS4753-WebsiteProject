@@ -1,7 +1,7 @@
 <?php
 
 	# Connet to DB
-	$db = new mysqli('localhost', 'root', 'secret', 'chef4hire');
+	$db = new mysqli('localhost', 'root', '', 'chef4hire');
 	      if ($db->connect_error):
 	         die ("Could not connect to db: " . $db->connect_error);
 	      endif;
@@ -14,6 +14,8 @@
 	$city = $_POST['City'];
 	$state = $_POST['State'];
 	$zipcode = $_POST['ZipCode'];
+
+
 	$alreadythere = 0;
 
 	$query = "select username from Users";
@@ -26,10 +28,10 @@
 	}
 	
 	if ($alreadythere == 0):
-		$query = "insert into Users values (NULL, '$firstname', '$lastname', '$username', '$email', '$address', '$city', '$state', '$zipcode')";
+		$query = "insert into Users values (NULL, '$username', '$firstname', '$lastname', '$email', '$address', '$city', '$state', '$zipcode')";
 		$db->query($query) or die ("Invalid insert " . $db->error);
-		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/addUser.html");
+		header("Location: http://localhost:80/CS4753-WebsiteProject/Chef4Hire/addUser.html");
 	else:
-		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/Duplicate.html");
+		header("Location: http://localhost:80	/CS4753-WebsiteProject/Chef4Hire/Duplicate.html");
 	endif;
 ?>
