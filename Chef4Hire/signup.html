@@ -24,7 +24,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			var city = document.register.City;
 			var state = document.register.State;
 			var zipcode = document.register.ZipCode;
-	
+
 
 
 			if(!userVal(user) || !nameVal(firstnname, lastname) || ! emailVal(email) || !addressVal(address) || !cityVal(city) || !stateVal(state) || !zipcodeVal(zipcode)){
@@ -108,7 +108,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			return true;
 		}
 
-		
+
 	</script>
 </head>
 <body class="homepage">
@@ -157,17 +157,27 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 				<div class="login3">
 					<form method = "POST" name="register" action = "newuserquery.php" onSubmit="return formValidation();">
-						<input type="text2" placeholder="Username" name="User">
-						<input type="text4" placeholder="First Name" name="FirstName">
-						<input type="text4" placeholder="Last Name" name = "LastName">
-						<input type="text2" placeholder="Email" name = "Email"></br>
-						<input type="text2" placeholder="Address" name = "Address"></br>
-						<input type="text3" placeholder="City" name = "City">
-						<input type="text3" placeholder="State" name = "State">
-						<input type="text3" placeholder="Zip Code" name = "ZipCode"> </br>
+						<form>
+
+						<label28 for="username">Username:</label28>
+						<input type="text4" id="username" name="User">
+						<label28 for="First">First Name:</label28>
+						<input type="text4" id="First"name="FirstName">
+						<label28 for="Last">Last Name:</label28>
+						<input type="text4" id="Last" name = "LastName">
+						<label28 for="Email">E-mail:</label28>
+						<input type="text4" id="Email" name = "Email">
+						<label28 for="Address"> Home Address:</label28>
+						<input type="text4" id="Address" name = "Address">
+						<label28 for="City">City:</label28>
+						<input type="text4" id="City" name = "City">
+						<label28 for="State">State:</label28>
+						<input type="text4" id="State" name = "State">
+						<label28 for="Zip Code">Zip Code:</label28>
+						<input type="text4" id="Zip Code" name = "ZipCode"> </br></br></br></br></br></br></br></br></br></br></br>
 						</br>
 						<!-- <input type="password" placeholder="Password" name="Password"></br></br> -->
-						<input type="submit" value="SignUp">
+						<input type="submit" value="SignUp"></br>
 						<!-- <a href="#" class="form-button-submit button icon fa-pencil">SignUp</a> -->
 					</form>
 		</div>

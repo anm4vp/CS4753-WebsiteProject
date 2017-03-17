@@ -2607,13 +2607,6 @@
 		font-size: 22px;
 	}
 
-	/*h15{
-	  text-align:center;
-	  color:$white;
-	  font-weight:$thin;
-	  margin-top: 40px;
-	}*/
-
 	h15 {
 		font-size: 1.20em;
 		font-weight: $thin;
@@ -2623,19 +2616,43 @@
 		text-align: center;
 	}
 
+	label28 {
+		display: inline;
+		width:180px;
+    clear:left;
+    text-align:right;
+    padding-right:10px;
+		float: left;
+		color: #fff
+	}
+	/*input, label28 {
+	    float:left;
+	}*/
+	label29 {
+		display: block;
+		width:180px;
+    clear:right;
+    text-align:right;
+    padding-right:10px;
+		float: left;
+		color: #fff
+	}
+
 	.login3{
 		position: relative;
 		top: calc(50% - 125px);
-		left: calc(50% - 155px);
+		left: calc(50% - 265px);
 		height: 150px;
-		width: 350px;
+		/*width: 350px;*/
+		width: 650px;
 		padding: 0px;
 		z-index: 5;
 		margin-top: -85px;
 	}
 
 		.login3 input[type=text4]{
-		width: 169px;
+		/*width: 169px;*/
+		width: 300px;
 		height: 30px;
 		background: transparent;
 		border: 2px solid rgba(255,255,255,1);
@@ -2645,10 +2662,12 @@
 		font-size: 16px;
 		font-weight: 800;
 		padding: 4px;
+		float: left;
 		margin-top: 10px;
 	}
 	.login3 input[type=text2]{
-		width: 340px;
+		/*width: 340px;*/
+		width: 300px;
 		height: 30px;
 		background: transparent;
 		border: 2px solid rgba(255,255,255,1);
@@ -2661,7 +2680,7 @@
 		margin-top: 10px;
 	}
 	.login3 input[type=text3]{
-		width: 111px;
+		width: 100px;
 		height: 30px;
 		background: transparent;
 		border: 2px solid rgba(255,255,255,1);
@@ -2672,7 +2691,9 @@
 		font-weight: 800;
 		padding: 4px;
 		margin-top: 10px;
+		float: left;
 	}
+
 
 	.login3 input[type=password]{
 		width: 340px;

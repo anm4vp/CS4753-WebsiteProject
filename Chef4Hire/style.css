@@ -10,7 +10,15 @@ body3{
 	font-family: Arial;
 	font-size: 12px;
 }
+label28 {
+  display: block;
+  margin-bottom: 8px;
+}
 
+label28.light {
+  font-weight: 300;
+  display: inline;
+}
 .body3{
 	position: absolute;
 	top: -20px;

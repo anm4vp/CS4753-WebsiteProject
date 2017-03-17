@@ -57,6 +57,13 @@ body{
 	color: #5379fa !important;
 }
 
+label28 {
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+
 .login{
 	position: absolute;
 	top: calc(50% - 75px);
@@ -118,6 +125,7 @@ body{
 }
 
 .login input[type=text]:focus{
+	display: block;
 	outline: none;
 	border: 1px solid rgba(255,255,255,0.9);
 }
