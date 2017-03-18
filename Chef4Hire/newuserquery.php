@@ -30,8 +30,8 @@
 	if ($alreadythere == 0):
 		$query = "insert into Users values (NULL, '$username', '$firstname', '$lastname', '$email', '$address', '$city', '$state', '$zipcode')";
 		$db->query($query) or die ("Invalid insert " . $db->error);
-		header("Location: http://localhost:80/CS4753-WebsiteProject/Chef4Hire/addUser.html");
+		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/addUser.html");
 	else:
-		header("Location: http://localhost:80	/CS4753-WebsiteProject/Chef4Hire/Duplicate.html");
+		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/Duplicate.html");
 	endif;
 ?>
