@@ -41,7 +41,8 @@ $paypalId='pjpatidar16-facilitator@gmail.com';
 <div id="features-wrapper2">
   <section id="features" class="container">
     <header>
-      <h2>Shop Now</h2>
+      <h2>Eat Now</h2>
+      <h3>Italian</h3>
     </header>
     <div class="row">
       <div class="4u 12u(mobile)">
@@ -118,7 +119,86 @@ $paypalId='pjpatidar16-facilitator@gmail.com';
                    </section>
             </div>
           </div>
+          <div id="features-wrapper2">
+            <section id="features" class="container">
+              <header>
+              <h3>Italian</h3>
+              </header>
+              <div class="row">
+                <div class="4u 12u(mobile)">
 
+                  <!-- Feature -->
+                  <section>
+                    <a  class="image featured"><img src="images/AmericanFoodCover.jpg" width="265" height="230"alt="" /></a>
+                    <header>
+                      <h3>American Hamburger<h3>
+                      </header>
+                      <form action="<?php echo $paypalUrl; ?>"  method="post" >
+                        <div class="panel price panel-red">
+                          <input type="hidden" name="business" value="<?php echo $paypalId; ?>">
+                          <input type="hidden" name="cmd" value="_xclick">
+                          <input type="hidden" name="item_name" value="American Burger">
+                          <input type="hidden" name="item_number" value="1">
+                          <input type="hidden" name="amount" value="8.99">
+                          <input type="hidden" name="no_shipping" value="1">
+                          <input type="hidden" name="currency_code" value="USD">
+                          <input type="hidden" name="cancel_return" value="http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/index.html">
+                          <input type="hidden" name="return" value="http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/index.html">
+                          <button class="btn btn-lg btn-block btn-danger" href="#">EAT NOW!</button>
+                        </div>
+                      </form>
+                      </div>
+                      <div class="4u 12u(mobile)">
+
+                        <!-- Feature -->
+
+                          <a class="image featured"><img src="images/ChineseFoodCover.jpg" width="265" height="230"alt="" /></a>
+                          <header>
+                            <h3>Chinese Noodles<h3>
+                            </header>
+                            <form action="<?php echo $paypalUrl; ?>"  method="post" >
+                              <div class="panel price panel-red">
+                                <input type="hidden" name="business" value="<?php echo $paypalId; ?>">
+                                <input type="hidden" name="cmd" value="_xclick">
+                                <input type="hidden" name="item_name" value="Chinese Noodles">
+                                <input type="hidden" name="item_number" value="2">
+                                <input type="hidden" name="amount" value="11.99">
+                                <input type="hidden" name="no_shipping" value="1">
+                                <input type="hidden" name="currency_code" value="USD">
+                                <input type="hidden" name="cancel_return" value="http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/index.html">
+                                <input type="hidden" name="return" value="http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/index.html">
+                                <button class="btn btn-lg btn-block btn-danger" href="#">EAT NOW!</button>
+                              </div>
+                              </form>
+                            </div>
+
+
+                      <div class="4u 12u(mobile)">
+
+                        <!-- Feature -->
+
+                          <a  class="image featured"><img src="images/IndianFoodCover.jpg" width="265" height="230"alt="" /></a>
+                          <header>
+                            <h3>Authentic Samosa<h3>
+                            </header>
+                            <form action="<?php echo $paypalUrl; ?>"  method="post" >
+                              <div class="panel price panel-red">
+                                <input type="hidden" name="business" value="<?php echo $paypalId; ?>">
+                                <input type="hidden" name="cmd" value="_xclick">
+                                <input type="hidden" name="item_name" value="Samosa">
+                                <input type="hidden" name="item_number" value="3">
+                                <input type="hidden" name="amount" value="4.99">
+                                <input type="hidden" name="no_shipping" value="1">
+                                <input type="hidden" name="currency_code" value="USD">
+                                <input type="hidden" name="cancel_return" value="http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/index.html">
+                                <input type="hidden" name="return" value="http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/index.html">
+                                <button class="btn btn-lg btn-block btn-danger" href="#">EAT NOW!</button>
+                              </div>
+                            </form>
+                            </div>
+                             </section>
+                      </div>
+                    </div>
   <div id="footer-wrapper">
 		<div id="footer" class="container">
 			<header>
