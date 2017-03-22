@@ -15,98 +15,98 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<script type="text/javascript">
-		function formValidation(){
-			var user = document.register.User;
-			var firstnname = document.register.FirstName;
-			var lastname = document.register.LastName;
-			var email = document.register.Email;
-			var address = document.register.Address;
-			var city = document.register.City;
-			var state = document.register.State;
-			var zipcode = document.register.ZipCode;
+	function formValidation(){
+		var user = document.register.User;
+		var firstnname = document.register.FirstName;
+		var lastname = document.register.LastName;
+		var email = document.register.Email;
+		var address = document.register.Address;
+		var city = document.register.City;
+		var state = document.register.State;
+		var zipcode = document.register.ZipCode;
 
 
 
-			if(!userVal(user) || !nameVal(firstnname, lastname) || ! emailVal(email) || !addressVal(address) || !cityVal(city) || !stateVal(state) || !zipcodeVal(zipcode)){
-				return false;
-			}
-			return true;
-
+		if(!userVal(user) || !nameVal(firstnname, lastname) || ! emailVal(email) || !addressVal(address) || !cityVal(city) || !stateVal(state) || !zipcodeVal(zipcode)){
+			return false;
 		}
+		return true;
 
-		function userVal(user){
-			if(user.value.length == 0){
-				alert("Username field is empty");
-				user.focus();
-				return false;
-			}
-			return true;
-		}
+	}
 
-		function nameVal(firstnname, lastname){
-			var allLetters = /^[A-Za-z]+$/;
-			if(!firstnname.value.match(allLetters)){
-				alert("First name not valid");
-				firstnname.focus();
-				return false;
-			}
-			if(!lastname.value.match(allLetters)){
-				alert("Last name not valid");
-				lastname.focus();
-				return false;
-			}
-			return true;
+	function userVal(user){
+		if(user.value.length == 0){
+			alert("Username field is empty");
+			user.focus();
+			return false;
 		}
+		return true;
+	}
 
-		function emailVal(email){
-			var emailcheck = /^([A-Za-z0-9._-])+@([a-z])+\.([a-z.])+$/;
-			if(!email.value.match(emailcheck)){
-				alert("Email is invalid");
-				email.focus();
-				return false;
-			}
-			return true;
+	function nameVal(firstnname, lastname){
+		var allLetters = /^[A-Za-z]+$/;
+		if(!firstnname.value.match(allLetters)){
+			alert("First name not valid");
+			firstnname.focus();
+			return false;
 		}
+		if(!lastname.value.match(allLetters)){
+			alert("Last name not valid");
+			lastname.focus();
+			return false;
+		}
+		return true;
+	}
 
-		function addressVal(address){
-			var check = /^\d+ ([A-Za-z ])+$/;
-			if(!address.value.match(check)){
-				alert("Address is invalid");
-				address.focus();
-				return false;
-			}
-			return true;
+	function emailVal(email){
+		var emailcheck = /^([A-Za-z0-9._-])+@([a-z])+\.([a-z.])+$/;
+		if(!email.value.match(emailcheck)){
+			alert("Email is invalid");
+			email.focus();
+			return false;
 		}
+		return true;
+	}
 
-		function cityVal(city){
-			var check = /^[A-Za-z ]+$/;
-			if(!city.value.match(check)){
-				alert("City is invalid");
-				city.focus();
-				return false;
-			}
-			return true;
+	function addressVal(address){
+		var check = /^\d+ ([A-Za-z ])+$/;
+		if(!address.value.match(check)){
+			alert("Address is invalid");
+			address.focus();
+			return false;
 		}
+		return true;
+	}
 
-		function stateVal(state){
-			var check = /^[A-Za-z ]+$/;
-			if(!state.value.match(check)){
-				alert("State is invalid");
-				state.focus();
-				return false;
-			}
-			return true;
+	function cityVal(city){
+		var check = /^[A-Za-z ]+$/;
+		if(!city.value.match(check)){
+			alert("City is invalid");
+			city.focus();
+			return false;
 		}
+		return true;
+	}
 
-		function zipcodeVal(zipcode){
-			var check = /^[0-9]{5}$/;
-			if(!zipcode.value.match(check)){
-				alert("Zipcode is invalid");
-				zipcode.focus();
-				return false;
-			}
-			return true;
+	function stateVal(state){
+		var check = /^[A-Za-z ]+$/;
+		if(!state.value.match(check)){
+			alert("State is invalid");
+			state.focus();
+			return false;
 		}
+		return true;
+	}
+
+	function zipcodeVal(zipcode){
+		var check = /^[0-9]{5}$/;
+		if(!zipcode.value.match(check)){
+			alert("Zipcode is invalid");
+			zipcode.focus();
+			return false;
+		}
+		return true;
+	}
 
 
 	</script>
@@ -142,7 +142,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <div id="features-wrapper4">
 	<section id="features" class="container">
 
-			<!-- Post -->
+		<!-- Post -->
 
 		<div class="body3"></div>
 		<div class="grad3"></div>
@@ -155,110 +155,162 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 		<br>
 
-				<div class="login3">
-					<form method = "POST" name="register" action = "newuserquery.php" onSubmit="return formValidation();">
-						<form>
+		<div class="login3">
+			<form method = "POST" name="register" action = "newuserquery.php" onSubmit="return formValidation();">
+				<form>
+					<label28 for="username">Username:</label28>
+					<input type="text4" id="username" name="User">
+					<label28 for="First">First Name:</label28>
+					<input type="text4" id="First"name="FirstName">
+					<label28 for="Last">Last Name:</label28>
+					<input type="text4" id="Last" name = "LastName">
+					<label28 for="Email">E-mail:</label28>
+					<input type="text4" id="Email" name = "Email">
+					<label28 for="Address"> Home Address:</label28>
+					<input type="text4" id="Address" name = "Address">
+					<label28 for="City">City:</label28>
+					<input type="text4" id="City" name = "City">
+					<label28 for="soflow">State:</label28>
+					<select id="soflow">
+						<option> </option>
+						<option value="AL">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CO">Colorado</option>
+						<option value="CT">Connecticut</option>
+						<option value="DE">Delaware</option>
+						<option value="DC">District Of Columbia</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="HI">Hawaii</option>
+						<option value="ID">Idaho</option>
+						<option value="IL">Illinois</option>
+						<option value="IN">Indiana</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="KY">Kentucky</option>
+						<option value="LA">Louisiana</option>
+						<option value="ME">Maine</option>
+						<option value="MD">Maryland</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MI">Michigan</option>
+						<option value="MN">Minnesota</option>
+						<option value="MS">Mississippi</option>
+						<option value="MO">Missouri</option>
+						<option value="MT">Montana</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NH">New Hampshire</option>
+						<option value="NJ">New Jersey</option>
+						<option value="NM">New Mexico</option>
+						<option value="NY">New York</option>
+						<option value="NC">North Carolina</option>
+						<option value="ND">North Dakota</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="OR">Oregon</option>
+						<option value="PA">Pennsylvania</option>
+						<option value="RI">Rhode Island</option>
+						<option value="SC">South Carolina</option>
+						<option value="SD">South Dakota</option>
+						<option value="TN">Tennessee</option>
+						<option value="TX">Texas</option>
+						<option value="UT">Utah</option>
+						<option value="VT">Vermont</option>
+						<option value="VA">Virginia</option>
+						<option value="WA">Washington</option>
+						<option value="WV">West Virginia</option>
+						<option value="WI">Wisconsin</option>
+						<option value="WY">Wyoming</option>
+					</select>
+			<label28 for="Zip Code">Zip Code:</label28>
+			<input type="text4" id="Zip Code" name = "ZipCode"> </br></br></br></br></br></br></br></br></br></br></br>
+		</br>
+		<!-- <input type="password" placeholder="Password" name="Password"></br></br> -->
+		<input type="submit" value="SignUp"></br>
+		<!-- <a href="#" class="form-button-submit button icon fa-pencil">SignUp</a> -->
+	</form>
+</div>
+</div>
+</div>
+<!-- </div>
+</div> -->
 
-						<label28 for="username">Username:</label28>
-						<input type="text4" id="username" name="User">
-						<label28 for="First">First Name:</label28>
-						<input type="text4" id="First"name="FirstName">
-						<label28 for="Last">Last Name:</label28>
-						<input type="text4" id="Last" name = "LastName">
-						<label28 for="Email">E-mail:</label28>
-						<input type="text4" id="Email" name = "Email">
-						<label28 for="Address"> Home Address:</label28>
-						<input type="text4" id="Address" name = "Address">
-						<label28 for="City">City:</label28>
-						<input type="text4" id="City" name = "City">
-						<label28 for="State">State:</label28>
-						<input type="text4" id="State" name = "State">
-						<label28 for="Zip Code">Zip Code:</label28>
-						<input type="text4" id="Zip Code" name = "ZipCode"> </br></br></br></br></br></br></br></br></br></br></br>
-						</br>
-						<!-- <input type="password" placeholder="Password" name="Password"></br></br> -->
-						<input type="submit" value="SignUp"></br>
-						<!-- <a href="#" class="form-button-submit button icon fa-pencil">SignUp</a> -->
-					</form>
-		</div>
-			</div>
-				</div>
-			<!-- </div>
-			</div> -->
-
-	<div id="footer-wrapper">
-		<div id="footer" class="container">
-			<header>
-				<h2>Questions or comments? <strong>Get in touch:</strong></h2>
-			</header>
-			<div class="row">
-				<div class="6u 12u(mobile)">
-					<section>
-						<form method="post" action="#">
-							<div class="row 50%">
-								<div class="6u 12u(mobile)">
-									<input name="name" placeholder="Name" type="text" />
-								</div>
-								<div class="6u 12u(mobile)">
-									<input name="email" placeholder="Email" type="text" />
-								</div>
-							</div>
-							<div class="row 50%">
-								<div class="12u">
-									<textarea name="message" placeholder="Message"></textarea>
-								</div>
-							</div>
-							<div class="row 50%">
-								<div class="12u">
-									<a href="#" class="form-button-submit button icon fa-envelope">Send Message</a>
-								</div>
-							</div>
-						</form>
-					</section>
-				</div>
-				<div class="6u 12u(mobile)">
-					<section>
-
-						<div class="row">
+<div id="footer-wrapper">
+	<div id="footer" class="container">
+		<header>
+			<h2>Questions or comments? <strong>Get in touch:</strong></h2>
+		</header>
+		<div class="row">
+			<div class="6u 12u(mobile)">
+				<section>
+					<form method="post" action="#">
+						<div class="row 50%">
 							<div class="6u 12u(mobile)">
-								<ul class="icons">
-									<li class="icon fa-home">
-											<a href="index.html">Home</a>
-									</li>
-									<li class="icon fa-users">
-										<a href="about.html">About us</a>
-									</li>
-									<li class="icon fa-pencil">
-										<a href="#">Sign Up</a>
-									</li>
-								</ul>
+								<input name="name" placeholder="Name" type="text" />
 							</div>
 							<div class="6u 12u(mobile)">
-								<ul class="icons">
-									<li class="icon fa-twitter">
-										<a href="#">@CHEF4HIRE</a>
-									</li>
-									<li class="icon fa-instagram">
-										<a href="#">instagram.com/CHEF4HIRE</a>
-									</li>
-
-									<li class="icon fa-facebook">
-										<a href="#">facebook.com/CHEF4HIRE</a>
-									</li>
-								</ul>
+								<input name="email" placeholder="Email" type="text" />
 							</div>
 						</div>
-					</section>
-				</div>
+						<div class="row 50%">
+							<div class="12u">
+								<textarea name="message" placeholder="Message"></textarea>
+							</div>
+						</div>
+						<div class="row 50%">
+							<div class="12u">
+								<a href="#" class="form-button-submit button icon fa-envelope">Send Message</a>
+							</div>
+						</div>
+					</form>
+				</section>
+			</div>
+			<div class="6u 12u(mobile)">
+				<section>
+
+					<div class="row">
+						<div class="6u 12u(mobile)">
+							<ul class="icons">
+								<li class="icon fa-home">
+									<a href="index.html">Home</a>
+								</li>
+								<li class="icon fa-users">
+									<a href="about.html">About us</a>
+								</li>
+								<li class="icon fa-pencil">
+									<a href="#">Sign Up</a>
+								</li>
+							</ul>
+						</div>
+						<div class="6u 12u(mobile)">
+							<ul class="icons">
+								<li class="icon fa-twitter">
+									<a href="#">@CHEF4HIRE</a>
+								</li>
+								<li class="icon fa-instagram">
+									<a href="#">instagram.com/CHEF4HIRE</a>
+								</li>
+
+								<li class="icon fa-facebook">
+									<a href="#">facebook.com/CHEF4HIRE</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
-	</br>
-		<div id="copyright" class="container">
-			<ul class="links">
-				<li>&copy; Chef-4-Hire 2017. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
 	</div>
+</br>
+<div id="copyright" class="container">
+	<ul class="links">
+		<li>&copy; Chef-4-Hire 2017. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+	</ul>
+</div>
+</div>
 </div>
 
 
