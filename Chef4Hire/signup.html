@@ -24,10 +24,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		var city = document.register.City;
 		var state = document.register.State;
 		var zipcode = document.register.ZipCode;
-
-
-
-		if(!userVal(user) || !nameVal(firstnname, lastname) || ! emailVal(email) || !addressVal(address) || !cityVal(city) || !stateVal(state) || !zipcodeVal(zipcode)){
+		var pw = document.register.Password;
+		var pw2 = document.register.Password2;
+		if(!pwVal(pw, pw2) || !userVal(user) || !nameVal(firstnname, lastname) || ! emailVal(email) || !addressVal(address) || !cityVal(city) || !stateVal(state) || !zipcodeVal(zipcode)){
 			return false;
 		}
 		return true;
@@ -108,6 +107,15 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		return true;
 	}
 
+	function pwVal(pw, pw2){
+		if(pw.value != pw2.value) {
+			alert("Passwords are not correct");
+			pw.focus();
+			pw2.focus();
+			return false;
+		}
+		return true;
+	}
 
 	</script>
 </head>
@@ -160,8 +168,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<form>
 					<label28 for="username">Username:</label28>
 					<input type="text4" id="username" name="User">
-					<label28 for="username">Password:</label28>
-					<input type="text4" id="password" name="User">
+					<label28 for="pw">Password:</label28>
+					<input type="password" id="password" name="Password">
+					<label28 for="pw">Confirm Password:</label28>
+					<input type="password" id="password2" name="Password2">
 					<label28 for="First">First Name:</label28>
 					<input type="text4" id="First"name="FirstName">
 					<label28 for="Last">Last Name:</label28>
@@ -229,7 +239,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					</select>
 			<label28 for="Zip Code">Zip Code:</label28>
 			<input type="text4" id="Zip Code" name = "ZipCode"> </br></br></br></br></br></br></br></br></br></br></br>
-		</br>
+		</br></br></br>
 		<!-- <input type="password" placeholder="Password" name="Password"></br></br> -->
 		<input type="submit" value="SignUp"></br>
 		<!-- <a href="#" class="form-button-submit button icon fa-pencil">SignUp</a> -->

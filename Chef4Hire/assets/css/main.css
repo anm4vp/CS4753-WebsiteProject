@@ -2667,6 +2667,21 @@ label29 {
 	float: left;
 	margin-top: 10px;
 }
+.login3 input[type=password]{
+	/*width: 169px;*/
+	width: 300px;
+	height: 30px;
+	background: transparent;
+	border: 2px solid rgba(255,255,255,1);
+	border-radius: 1px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 800;
+	padding: 4px;
+	float: left;
+	margin-top: 10px;
+}
 .login3 input[type=text2]{
 	/*width: 340px;*/
 	width: 300px;
@@ -2737,6 +2752,10 @@ label29 {
 }
 
 .login3 input[type=text4]:focus{
+	outline: none;
+	border: 2px solid rgba(237, 120, 106, 1);
+}
+.login3 input[type=password]:focus{
 	outline: none;
 	border: 2px solid rgba(237, 120, 106, 1);
 }

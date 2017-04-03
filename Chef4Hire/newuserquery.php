@@ -18,6 +18,8 @@ require('PHPmailer/PHPMailerAutoload.php');
 	$city = $_POST['City'];
 	$state = $_POST['State'];
 	$zipcode = $_POST['ZipCode'];
+	$password = $_POST['Password'];
+
 
 	$mail = new PHPMailer();
 	$mail->IsSMTP();
@@ -48,7 +50,7 @@ require('PHPmailer/PHPMailerAutoload.php');
 	}
 
 	if ($alreadythere == 0 && $mail->send()):
-		$query = "insert into Users values (NULL, '$username', '$firstname', '$lastname', '$email', '$address', '$city', '$state', '$zipcode')";
+		$query = "insert into Users values (NULL, '$username', '$firstname', '$lastname', '$email', '$address', '$city', '$state', '$zipcode' , '$password')";
 		$db->query($query) or die ("Invalid insert " . $db->error);
 		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/shopping.php");
 	else:
