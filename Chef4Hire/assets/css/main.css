@@ -2585,13 +2585,13 @@ body4{
 
 .body44{
 	position: absolute;
-	top: 5500px;
-	left: 500px;
-	right: 400px;
+	top: -50px;
+	left: -20px;
+	right: -40px;
 	bottom: 0px;
 	width: auto;
 	height: auto;
-	background-image: url("ItalianFoodCover.jpg");
+	background-image: url("image5.jpg");
 	background-size: cover;
 	-webkit-filter: blur(2px);
 	z-index: 0;
