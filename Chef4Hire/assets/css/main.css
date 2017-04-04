@@ -2559,6 +2559,15 @@ body3{
 	font-family: Arial;
 	font-size: 12px;
 }
+body4{
+	margin: 100px;
+	padding:100px;
+	background: #fff;
+
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
 
 .body3{
 	position: absolute;
@@ -2569,6 +2578,20 @@ body3{
 	width: auto;
 	height: auto;
 	background-image: url("image5.jpg");
+	background-size: cover;
+	-webkit-filter: blur(2px);
+	z-index: 0;
+}
+
+.body44{
+	position: absolute;
+	top: 5500px;
+	left: 500px;
+	right: 400px;
+	bottom: 0px;
+	width: auto;
+	height: auto;
+	background-image: url("ItalianFoodCover.jpg");
 	background-size: cover;
 	-webkit-filter: blur(2px);
 	z-index: 0;
@@ -2587,13 +2610,31 @@ body3{
 	opacity: 0.7;
 }
 
+.grad44{
+	position: absolute;
+	top: -50px;
+	left: -100px;
+	right: -40px;
+	bottom: 0px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
 .header3{
 	position: absolute;
-	top: calc(50% - 250px);
+	top: calc(50% - 350px);
 	left: calc(50% - 250px);
 	z-index: 2;
 }
-
+.header44{
+	position: absolute;
+	top: calc(50% - 350px);
+	left: calc(50% - 250px);
+	z-index: 2;
+}
 .header3 div{
 	color: #fff;
 	font-family: 'Arvo';
@@ -2601,12 +2642,21 @@ body3{
 	font-size: 2em;
 	text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 }
-
+.header44 div{
+	color: #fff;
+	font-family: 'Arvo';
+	font-weight: 600;
+	font-size: 2em;
+	text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+}
 .header3 div span{
 	color: #fff !important;
 	font-size: 22px;
 }
-
+.header44 div span{
+	color: #fff !important;
+	font-size: 22px;
+}
 h15 {
 	font-size: 1.20em;
 	font-weight: $thin;
@@ -2640,9 +2690,9 @@ label29 {
 
 .login3{
 	position: relative;
-	top: calc(50% - 125px);
+	top: calc(50% - 200px);
 	left: calc(50% - 320px);
-	height: 150px;
+	height: 350px;
 	width: 650px;
 	padding: 0px;
 	z-index: 5;
@@ -2709,22 +2759,6 @@ label29 {
 	padding: 4px;
 	margin-top: 10px;
 	float: left;
-}
-
-
-.login3 input[type=password]{
-	width: 340px;
-	height: 30px;
-	background: transparent;
-	border: 2px solid rgba(255,255,255,1);
-	border-radius: 1px;
-	color: #fff;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 800;
-	padding: 4px;
-	margin-top: 10px;
-	margin-bottom: 10px;
 }
 
 .login input[type=button]{
