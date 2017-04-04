@@ -20,24 +20,6 @@ require('PHPmailer/PHPMailerAutoload.php');
 	$zipcode = $_POST['ZipCode'];
 	$password = $_POST['Password'];
 
-
-	$mail = new PHPMailer();
-	$mail->IsSMTP();
-	$mail->SMTPAuth = true;
-	$mail->Host = "smtp.gmail.com";                             // Enable SMTP authentication
-	$mail->Username = 'pjpatidar16@gmail.com';                 // SMTP username
-	$mail->Password = 'basketball4life';                           // SMTP password
-	$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-	$mail->Port = 587;                                    // TCP port to connect to
-
-	$mail->setFrom('pjpatidar16@gmail.com');
-	$mail->addAddress($email);     // Add a recipient
-
-
-	$mail->Subject = 'Chef-4-Hire Confirmation Email';
-	$mail->Body    = 'Thank you for signing up with Chef-4-Hire';
-
-
 	$alreadythere = 0;
 
 	$query = "select username from Users";
@@ -52,7 +34,25 @@ require('PHPmailer/PHPMailerAutoload.php');
 	if ($alreadythere == 0 && $mail->send()):
 		$query = "insert into Users values (NULL, '$username', '$firstname', '$lastname', '$email', '$address', '$city', '$state', '$zipcode' , '$password')";
 		$db->query($query) or die ("Invalid insert " . $db->error);
+
+		$mail = new PHPMailer();
+		$mail->IsSMTP();
+		$mail->SMTPAuth = true;
+		$mail->Host = "smtp.gmail.com";                             // Enable SMTP authentication
+		$mail->Username = 'pjpatidar16@gmail.com';                 // SMTP username
+		$mail->Password = 'basketball4life';                           // SMTP password
+		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+		$mail->Port = 587;                                    // TCP port to connect to
+
+		$mail->setFrom('pjpatidar16@gmail.com');
+		$mail->addAddress($email);     // Add a recipient
+
+
+		$mail->Subject = 'Chef-4-Hire Confirmation Email';
+		$mail->Body    = 'Thank you for signing up with Chef-4-Hire';
+
 		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/shopping.php");
+
 	else:
 		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/Duplicate.html");
 	endif;

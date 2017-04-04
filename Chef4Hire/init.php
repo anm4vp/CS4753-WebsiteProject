@@ -17,7 +17,7 @@
 
       # Create the tables
       $result = $db->query(
-                "CREATE TABLE Users (user_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username varchar(30), firstname varchar(30), lastname varchar(30), email varchar(30), address varchar(30), city varchar(30), state varchar(5), zipcode INT)") or die ("Invalid: " . $db->error);
+                "CREATE TABLE Users (user_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username varchar(30), firstname varchar(30), lastname varchar(30), email varchar(30), address varchar(30), city varchar(30), state varchar(30), zipcode INT, password varchar(30))") or die ("Invalid: " . $db->error);
       
       ##### Code we can possibliy use later #####
 

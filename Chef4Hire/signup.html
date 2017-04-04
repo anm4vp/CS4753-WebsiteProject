@@ -111,6 +111,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			pw.focus();
 			pw2.focus();
 			return false;
+		} else if (pw.value.length > 30){
+			alert("Passwords length invalid");
+			pw.focus();
+			pw2.focus();
+			return false;
 		}
 		return true;
 	}
@@ -182,7 +187,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					<label28 for="City">City:</label28>
 					<input type="text4" id="City" name = "City">
 					<label28 for="soflow">State:</label28>
-					<select id="soflow">
+					<select id="soflow" name = "State">
 						<option> </option>
 						<option value="AL">Alabama</option>
 						<option value="AK">Alaska</option>
