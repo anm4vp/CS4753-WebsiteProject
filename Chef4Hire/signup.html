@@ -14,7 +14,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<script type="text/javascript">
 	function formValidation(){
-		var user = document.register.User;
+		var user = document.register.username;
 		var firstnname = document.register.FirstName;
 		var lastname = document.register.LastName;
 		var email = document.register.Email;
@@ -22,7 +22,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		var city = document.register.City;
 		var state = document.register.State;
 		var zipcode = document.register.ZipCode;
-		var pw = document.register.Password;
+		var pw = document.register.password;
 		var pw2 = document.register.Password2;
 		if(!pwVal(pw, pw2) || !userVal(user) || !nameVal(firstnname, lastname) || ! emailVal(email) || !addressVal(address) || !cityVal(city) || !stateVal(state) || !zipcodeVal(zipcode)){
 			return false;
@@ -171,9 +171,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<form method = "POST" name="register" action = "newuserquery.php" onsubmit="return formValidation();">
 				<form>
 					<label28 for="username">Username:</label28>
-					<input type="text4" id="username" name="User">
+					<input type="text4" id="username" name="username">
 					<label28 for="pw">Password:</label28>
-					<input type="password" id="password" name="Password">
+					<input type="password" id="password" name="password">
 					<label28 for="pw">Confirm Password:</label28>
 					<input type="password" id="password2" name="Password2">
 					<label28 for="First">First Name:</label28>
@@ -291,17 +291,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 						<div class="6u 12u(mobile)">
 							<ul class="icons">
 								<li class="icon fa-home">
-									<a href="index.html">Home</a>
+									<a href="index.php">Home</a>
 								</li>
 								<li class="icon fa-users">
-									<a href="about.html">About us</a>
+									<a href="about.php">About us</a>
 								</li>
-								<li class="icon fa-pencil">
-									<a href="#">Sign Up</a>
-								</li>
-								<li class="icon fa-sign-in">
-									<a href="login.html">Log In</a>
-								</li>
+
 							</ul>
 						</div>
 						<div class="6u 12u(mobile)">

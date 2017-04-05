@@ -6,41 +6,59 @@ $con= mysql_connect('localhost', 'root', '') or die("Failed to connect to MySQL:
 
 $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
 
-$ID = $_POST['username'];
-$Password = $_POST['password'];
-
-function SignIn() {
-  if(empty($_POST['username']))
-  {
-    echo "<script>
-    window.location.href='http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/login.html';
-    alert('Username empty');
-    </script>";
-
+session_start();
+if(isset($_SESSION['loggedin'])){
+  if ($_SESSION['loggedin'] == TRUE){
+    $name = $_SESSION['username'];
   }
-  if(empty($_POST['password']))
-  {
-    echo "<script>
-    window.location.href='http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/login.html';
-    alert('Password empty');
-    </script>";
-  }
-  session_start(); //starting the session for user profile page
-  $_SESSION['login'] = true;
-  $query = mysql_query("SELECT * FROM users where username = '$_POST[username]' AND Password = '$_POST[password]'") or die(mysql_error());
-  $row = mysql_fetch_array($query) or die(mysql_error());
-
-  if(!empty($row['username']) AND !empty($row['Password'])) {
-    $_SESSION['username'] = $row['Password'];
-    header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/shopping.php");
-  }
-
+} else {
+  // if not logged in, can't shop -> so redirect
+  header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/login.html");
 }
-
-if(isset($_POST['submit']))
-{
-  SignIn();
-}
+// $ID = rtrim($_POST['username']);
+// $Password = rtrim($_POST['password']);
+//
+// function SignIn() {
+//   if(empty($_POST['username']))
+//   {
+//     echo "<script>
+//     window.location.href='http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/login.html';
+//     alert('Username empty');
+//     </script>";
+//
+//   }
+//   if(empty($_POST['password']))
+//   {
+//     echo "<script>
+//     window.location.href='http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/login.html';
+//     alert('Password empty');
+//     </script>";
+//   }
+//   session_start(); //starting the session for user profile page
+//   $_SESSION['login'] = true;
+//   $query = mysql_query("SELECT * FROM users where username = '$_POST[username]' AND Password = '$_POST[password]'") or die(mysql_error());
+//   $row = mysql_fetch_array($query) or die(mysql_error());
+//
+//   if(!empty($row['username']) AND !empty($row['Password'])) {
+//     $_SESSION['username'] = $row['Password'];
+//     header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/shopping.php");
+//   }
+//
+// }
+//
+// if(isset($_POST['submit']))
+// {
+//   //SignIn();
+//   session_start();
+//   if(empty($_POST['username'])){
+//     header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/login.html");
+//   } else {
+//     $_SESSION['username'] = $_POST['username'];
+//     $_SESSION['loggedin'] = TRUE;
+//     $name = $_SESSION['username'];
+//   }
+//
+// }
 
 ?>
 
@@ -77,10 +95,21 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <!-- Nav -->
     <nav id="nav">
       <ul>
-        <li><a class="icon fa-home" href="index.html"><span>Home</span></a></li>
-        <li><a class="icon fa-users" href="about.html"><span>About Us</span></a></li>
-        <li><a class="icon fa-pencil" href='signup.html'><span>Sign up</span></a></li>
-        <li><a class="icon fa-sign-in" href='login.html'><span>Log in</span></a></li>
+        <?php
+        if(isset($_SESSION['loggedin'])){
+          if ($_SESSION['loggedin'] == TRUE){
+    				echo "<li><a class=\"icon fa-home\" href='index.php'><span>Home</span></a></li>";
+    				echo "<li><a class=\"icon fa-users\" href='about.php'><span>About Us</span></a></li>";
+            echo "<li><a class=\"icon fa-spoon\" href='shopping.php'><span>Shop Now</span></a></li>";
+    				echo "<li><a class=\"icon fa-sign-in\" href='logout.php'><span>Log Out</span></a></li>";
+          }
+        } else {
+          echo "<li><a class=\"icon fa-home\" href='index.php'><span>Home</span></a></li>";
+  				echo "<li><a class=\"icon fa-users\" href='about.php'><span>About Us</span></a></li>";
+  				echo "<li><a class=\"icon fa-pencil\" href='signup.php'><span>Sign up</span></a></li>";
+  				echo "<li><a class=\"icon fa-sign-in\" href='login.html'><span>Log in</span></a></li>";
+        }
+        ?>
       </ul>
     </nav>
 
@@ -90,7 +119,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <div id="features-wrapper2">
   <section id="features" class="container">
     <header>
-      <div><h2>Welcome!</h2></div>
+      <div><h2>Welcome, <?php echo $name; ?>!</h2></div>
     </br>
     <h2>Select Your Meal Below</h2>
   </br>
@@ -848,16 +877,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                                                                                 <div class="6u 12u(mobile)">
                                                                                   <ul class="icons">
                                                                                     <li class="icon fa-home">
-                                                                                      <a href="index.html">Home</a>
+                                                                                      <a href="index.php">Home</a>
                                                                                     </li>
                                                                                     <li class="icon fa-users">
-                                                                                      <a href="about.html">About us</a>
-                                                                                    </li>
-                                                                                    <li class="icon fa-pencil">
-                                                                                      <a href="signup.html">Sign Up</a>
-                                                                                    </li>
-                                                                                    <li class="icon fa-sign-in">
-                                                                                      <a href="login.html">Log In</a>
+                                                                                      <a href="about.php">About us</a>
                                                                                     </li>
                                                                                   </ul>
                                                                                 </div>

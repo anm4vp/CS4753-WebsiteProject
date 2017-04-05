@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <!--
 Strongly Typed by HTML5 UP
@@ -6,7 +9,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 <head>
-	<title>Thank You</title>
+	<title>About</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -30,10 +33,21 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li><a class="icon fa-home" href="index.php"><span>Home</span></a></li>
-				<li><a class="icon fa-users" href="about.php"><span>About Us</span></a></li>
-				<li><a class="icon fa-pencil" href='signup.php'><span>Sign up</span></a></li>
-				<li><a class="icon fa-sign-in" href='login.html'><span>Log in</span></a></li>
+        <?php
+        if(isset($_SESSION['loggedin'])){
+          if ($_SESSION['loggedin'] == TRUE){
+    				echo "<li><a class=\"icon fa-home\" href='index.php'><span>Home</span></a></li>";
+    				echo "<li><a class=\"icon fa-users\" href='about.php'><span>About Us</span></a></li>";
+            echo "<li><a class=\"icon fa-spoon\" href='shopping.php'><span>Shop Now</span></a></li>";
+    				echo "<li><a class=\"icon fa-sign-in\" href='logout.php'><span>Log Out</span></a></li>";
+          }
+        } else {
+          echo "<li><a class=\"icon fa-home\" href='index.php'><span>Home</span></a></li>";
+  				echo "<li><a class=\"icon fa-users\" href='about.php'><span>About Us</span></a></li>";
+  				echo "<li><a class=\"icon fa-pencil\" href='signup.php'><span>Sign up</span></a></li>";
+  				echo "<li><a class=\"icon fa-sign-in\" href='login.html'><span>Log in</span></a></li>";
+        }
+        ?>
 			</ul>
 		</nav>
 
@@ -47,12 +61,16 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<!-- Post -->
 			<article class="box post">
 				<header>
-					<h2>Thank you for signing up with Chef-4-Hire!</h2>
+					<h2>About Us</h2>
 				</header>
-				<span class="image featured"><img src="images/image9.jpg" alt="" /></span>
-				<a href="shopping.php" align = "center" class="form-button-submit button icon fa-pencil-square-o">Start Shopping Now</a>
-
+				<span class="image featured"><img src="images/image7.jpeg" alt="" /></span>
+				<h3>Yeah, we cook for you!</h3>
+				<p>The modern lifestyle constantly has you on the go, rushing from work to art class to the gym. With so many activities fighting for your attention, who has time to think about the next meal?! Fast-food and restaurants offer quick and easy ways to grab a meal, but they are not the most nutrious sources of food. Furthermore, nothing compares to a warm home-cooked meal.</p>
+				<p>We believe in providing authentic meals to modern on-the-go families and individuals who seek to build healthier lifestyles by consuming delicious freshly cooked meals. Rather than buying fast-food meals or expensive restaurant dinners, our services connect you to local chefs who use fresh ingredients to prepare meals at convenient prices.</p>
+				<p>Chef 4 Hire gives a wide variety of options to choose from including cuisines ranging from authentic Mexican to
+					Ethiopian meals. Chefs and home-cooks in your area prepare meals in single, double, and family sizes, which are delivered to you at the specifed meal time. We save you time so you can spend it on doing the things you love.</p>
 				</article>
+				<a href="signup.html" align = "center" class="form-button-submit button icon fa-pencil-square-o">Sign Up Now</a>
 			</div>
 		</div>
 	</div>
@@ -93,17 +111,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 							<div class="6u 12u(mobile)">
 								<ul class="icons">
 									<li class="icon fa-home">
-											<a href="index.html">Home</a>
+											<a href="index.php">Home</a>
 									</li>
 									<li class="icon fa-users">
-										<a href="about.html">About us</a>
+										<a href="about.php">About us</a>
 									</li>
-									<li class="icon fa-pencil">
-										<a href="signup.html">Sign Up</a>
-									</li>
-									<li class="icon fa-sign-in">
-										<a href="login.html">Log In</a>
-									</li>
+
 								</ul>
 							</div>
 							<div class="6u 12u(mobile)">

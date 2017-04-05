@@ -1,4 +1,12 @@
-
+<?php
+session_start();
+if(isset($_SESSION['loggedin'])){
+  if ($_SESSION['loggedin'] == TRUE){
+    // if not logged in, can't shop -> so redirect
+    header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/index.php");
+  }
+}
+?>
 
 <!DOCTYPE HTML>
 <!--
@@ -14,7 +22,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<script type="text/javascript">
 	function formValidation(){
-		var user = document.register.User;
+		var user = document.register.username;
 		var firstnname = document.register.FirstName;
 		var lastname = document.register.LastName;
 		var email = document.register.Email;
@@ -22,7 +30,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		var city = document.register.City;
 		var state = document.register.State;
 		var zipcode = document.register.ZipCode;
-		var pw = document.register.Password;
+		var pw = document.register.password;
 		var pw2 = document.register.Password2;
 		if(!pwVal(pw, pw2) || !userVal(user) || !nameVal(firstnname, lastname) || ! emailVal(email) || !addressVal(address) || !cityVal(city) || !stateVal(state) || !zipcodeVal(zipcode)){
 			return false;
@@ -111,6 +119,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			pw.focus();
 			pw2.focus();
 			return false;
+		} else if (pw.value.length > 30){
+			alert("Passwords length invalid");
+			pw.focus();
+			pw2.focus();
+			return false;
 		}
 		return true;
 	}
@@ -135,10 +148,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li><a class="icon fa-home" href="index.html"><span>Home</span></a></li>
-				<li><a class="icon fa-users" href="about.html"><span>About Us</span></a></li>
-				<li><a class="icon fa-pencil" href='signup.html'><span>Sign up</span></a></li>
-				<li><a class="icon fa-sign-in" href='login.php'><span>Log in</span></a></li>
+				<li><a class="icon fa-home" href="index.php"><span>Home</span></a></li>
+				<li><a class="icon fa-users" href="about.php"><span>About Us</span></a></li>
+				<li><a class="icon fa-pencil" href='signup.php'><span>Sign up</span></a></li>
+				<li><a class="icon fa-sign-in" href='login.html'><span>Log in</span></a></li>
 			</ul>
 		</nav>
 
@@ -154,14 +167,94 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<div class="body3"></div>
 		<div class="grad3"></div>
 		<div class="header3">
-			<div><h15>Log In.</h15></div>
+			<div><h15>Create your account.</h15></div>
+			<div><span>Start your healthy lifestyle now.</span></div>
 
 
 		</div>
 
 		<br>
 
+		<div class="login3">
+			<form method = "POST" name="register" action = "newuserquery.php" onsubmit="return formValidation();">
+				<form>
+					<label28 for="username">Username:</label28>
+					<input type="text4" id="username" name="username">
+					<label28 for="pw">Password:</label28>
+					<input type="password" id="password" name="password">
+					<label28 for="pw">Confirm Password:</label28>
+					<input type="password" id="password2" name="Password2">
+					<label28 for="First">First Name:</label28>
+					<input type="text4" id="First"name="FirstName">
+					<label28 for="Last">Last Name:</label28>
+					<input type="text4" id="Last" name = "LastName">
+					<label28 for="Email">E-mail:</label28>
+					<input type="text4" id="Email" name = "Email">
+					<label28 for="Address"> Home Address:</label28>
+					<input type="text4" id="Address" name = "Address">
+					<label28 for="City">City:</label28>
+					<input type="text4" id="City" name = "City">
+					<label28 for="soflow">State:</label28>
+					<select id="soflow" name = "State">
+						<option> </option>
+						<option value="AL">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CO">Colorado</option>
+						<option value="CT">Connecticut</option>
+						<option value="DE">Delaware</option>
+						<option value="DC">District Of Columbia</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="HI">Hawaii</option>
+						<option value="ID">Idaho</option>
+						<option value="IL">Illinois</option>
+						<option value="IN">Indiana</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="KY">Kentucky</option>
+						<option value="LA">Louisiana</option>
+						<option value="ME">Maine</option>
+						<option value="MD">Maryland</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MI">Michigan</option>
+						<option value="MN">Minnesota</option>
+						<option value="MS">Mississippi</option>
+						<option value="MO">Missouri</option>
+						<option value="MT">Montana</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NH">New Hampshire</option>
+						<option value="NJ">New Jersey</option>
+						<option value="NM">New Mexico</option>
+						<option value="NY">New York</option>
+						<option value="NC">North Carolina</option>
+						<option value="ND">North Dakota</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="OR">Oregon</option>
+						<option value="PA">Pennsylvania</option>
+						<option value="RI">Rhode Island</option>
+						<option value="SC">South Carolina</option>
+						<option value="SD">South Dakota</option>
+						<option value="TN">Tennessee</option>
+						<option value="TX">Texas</option>
+						<option value="UT">Utah</option>
+						<option value="VT">Vermont</option>
+						<option value="VA">Virginia</option>
+						<option value="WA">Washington</option>
+						<option value="WV">West Virginia</option>
+						<option value="WI">Wisconsin</option>
+						<option value="WY">Wyoming</option>
+					</select>
+			<label28 for="Zip Code">Zip Code:</label28>
+			<input type="text4" id="Zip Code" name = "ZipCode"> </br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br>
+		<!-- <input type="password" placeholder="Password" name="Password"></br></br> -->
 		<input type="submit" value="SignUp"></br>
+		<!-- <a href="#" class="form-button-submit button icon fa-pencil">SignUp</a> -->
 	</form>
 </div>
 </div>
@@ -206,16 +299,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 						<div class="6u 12u(mobile)">
 							<ul class="icons">
 								<li class="icon fa-home">
-									<a href="index.html">Home</a>
+									<a href="index.php">Home</a>
 								</li>
 								<li class="icon fa-users">
-									<a href="about.html">About us</a>
-								</li>
-								<li class="icon fa-pencil">
-									<a href="#">Sign Up</a>
-								</li>
-								<li class="icon fa-sign-in">
-									<a href="login.php">Log In</a>
+									<a href="about.php">About us</a>
 								</li>
 							</ul>
 						</div>

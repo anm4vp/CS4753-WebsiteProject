@@ -10,7 +10,7 @@ require('PHPmailer/PHPMailerAutoload.php');
 	         die ("Could not connect to db: " . $db->connect_error);
 	      endif;
 
-	$username = $_POST["User"];
+	$username = $_POST["username"];
 	$firstname = $_POST['FirstName'];
 	$lastname = $_POST['LastName'];
 	$email = $_POST['Email'];
@@ -18,7 +18,23 @@ require('PHPmailer/PHPMailerAutoload.php');
 	$city = $_POST['City'];
 	$state = $_POST['State'];
 	$zipcode = $_POST['ZipCode'];
-	$password = $_POST['Password'];
+	$password = $_POST['password'];
+
+	$mail = new PHPMailer();
+	$mail->IsSMTP();
+	$mail->SMTPAuth = true;
+	$mail->Host = "smtp.gmail.com";                             // Enable SMTP authentication
+	$mail->Username = 'pjpatidar16@gmail.com';                 // SMTP username
+	$mail->Password = 'basketball4life';                           // SMTP password
+	$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+	$mail->Port = 587;                                    // TCP port to connect to
+
+	$mail->setFrom('pjpatidar16@gmail.com');
+	$mail->addAddress($email);     // Add a recipient
+
+
+	$mail->Subject = 'Chef-4-Hire Confirmation Email';
+	$mail->Body    = 'Thank you for signing up with Chef-4-Hire';
 
 	$alreadythere = 0;
 
@@ -34,22 +50,9 @@ require('PHPmailer/PHPMailerAutoload.php');
 	if ($alreadythere == 0 && $mail->send()):
 		$query = "insert into Users values (NULL, '$username', '$firstname', '$lastname', '$email', '$address', '$city', '$state', '$zipcode' , '$password')";
 		$db->query($query) or die ("Invalid insert " . $db->error);
-
-		$mail = new PHPMailer();
-		$mail->IsSMTP();
-		$mail->SMTPAuth = true;
-		$mail->Host = "smtp.gmail.com";                             // Enable SMTP authentication
-		$mail->Username = 'pjpatidar16@gmail.com';                 // SMTP username
-		$mail->Password = 'basketball4life';                           // SMTP password
-		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-		$mail->Port = 587;                                    // TCP port to connect to
-
-		$mail->setFrom('pjpatidar16@gmail.com');
-		$mail->addAddress($email);     // Add a recipient
-
-
-		$mail->Subject = 'Chef-4-Hire Confirmation Email';
-		$mail->Body    = 'Thank you for signing up with Chef-4-Hire';
+		session_start();
+		$_SESSION['username'] = $_POST["username"];
+		$_SESSION['loggedin'] = TRUE;
 
 		header("Location: http://localhost:8082/CS4753-WebsiteProject/Chef4Hire/shopping.php");
 

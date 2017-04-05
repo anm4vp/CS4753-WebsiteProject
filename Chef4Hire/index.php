@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <!--
 Strongly Typed by HTML5 UP
@@ -29,11 +32,21 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li><a class="icon fa-home" href="index.html"><span>Home</span></a></li>
-				<li><a class="icon fa-users" href="about.html"><span>About Us</span></a></li>
-				<li><a class="icon fa-pencil" href='signup.html'><span>Sign up</span></a></li>
-				<li><a class="icon fa-sign-in" href='login.html'><span>Log in</span></a></li>
-
+        <?php
+        if(isset($_SESSION['loggedin'])){
+          if ($_SESSION['loggedin'] == TRUE){
+    				echo "<li><a class=\"icon fa-home\" href='index.php'><span>Home</span></a></li>";
+    				echo "<li><a class=\"icon fa-users\" href='about.php'><span>About Us</span></a></li>";
+            echo "<li><a class=\"icon fa-spoon\" href='shopping.php'><span>Shop Now</span></a></li>";
+    				echo "<li><a class=\"icon fa-sign-in\" href='logout.php'><span>Log Out</span></a></li>";
+          }
+        } else {
+          echo "<li><a class=\"icon fa-home\" href='index.php'><span>Home</span></a></li>";
+  				echo "<li><a class=\"icon fa-users\" href='about.php'><span>About Us</span></a></li>";
+  				echo "<li><a class=\"icon fa-pencil\" href='signup.php'><span>Sign up</span></a></li>";
+  				echo "<li><a class=\"icon fa-sign-in\" href='login.html'><span>Log in</span></a></li>";
+        }
+        ?>
 			</ul>
 		</nav>
 
@@ -280,12 +293,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 												<div class="6u 12u(mobile)">
 													<ul class="icons">
 														<li class="icon fa-home">
-																<a href="index.html">Home</a>
+																<a href="index.php">Home</a>
 														</li>
 														<li class="icon fa-users">
-															<a href="about.html">About us</a>
+															<a href="about.php">About us</a>
 														</li>
-												
+
 													</ul>
 												</div>
 												<div class="6u 12u(mobile)">

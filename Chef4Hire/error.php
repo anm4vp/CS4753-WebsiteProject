@@ -50,7 +50,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 		<!-- Header -->
 		<div id="header-wrapper">
+      <h2>Error! Login Not Valid. Please Try Again.</h2>
 			<div id="header" class="container">
+
 
 				<!-- Logo -->
 				<h1 id="logo"><a href="index.html">Chef-4-Hire</a></h1>
@@ -81,8 +83,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<div class="body44"></div>
 		<div class="grad3"></div>
 		<div class="header3">
+
 			<div><h15>Sign into your Account</h15></div>
 			<div><span>Start your healthy lifestyle now.</span></div>
+
 
 
 		</div>
